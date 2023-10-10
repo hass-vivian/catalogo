@@ -1,0 +1,171 @@
+:root {
+    --cor-site: #3B3C40;
+    --cor-fundo: #ffffff;
+    --cor-principal: #D99C2B;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho Menu */
+.header {
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    background-color: var(--cor-site);
+}
+
+.header_logo {
+    width: 6em;
+    height: auto;
+}
+
+#hamburguer {
+    background-color: var(--cor-principal);
+    color: var(--cor-site);
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.header_nav {
+    background-color: var(--cor-principal);
+    display: none;
+}
+
+.header_nav.show {
+    display: block;
+}
+
+ul {
+    margin: 0;
+}
+
+.header_nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
+}
+
+.header_nav a {
+    color: var(--cor-site);
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+}
+
+.header_nav a:hover {
+    background-color: var(--cor-principal);
+    color: #ffffff;
+}
+
+/* Ocultar o Botão de voltar ao Topo */
+a[href="#top"] {
+    display: none;
+}
+
+.div_card {
+    width: calc(100% / 3 - 4em);
+}
+
+.tamanho {
+    width: 2em;
+}
+
+@media screen and (min-width: 48em) {
+    /*768px maior que*/
+
+    #hamburguer {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header_logo {
+        margin-left: 2em;
+        width: 15em;
+        height: auto;
+    }
+
+    .header_nav {
+        display: block;
+        background-color: var(--cor-site);
+        font: bold;
+    }
+
+    .header_nav ul {
+        margin-right: 2em;
+        font-size: .9em;
+    }
+
+    .header_nav li {
+        display: inline-block;
+    }
+
+    .header_nav a {
+        border-radius: 5px;
+        color: var(--cor-principal);
+    }
+
+    .header_nav a:hover {
+        background-color: var(--cor-principal);
+    }
+
+    /* Botão de voltar ao Topo */
+    a[href="#top"] {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        background-color: var(--cor-site);
+        border-radius: 50%;
+    }
+
+    a[href="#top"]:hover {
+        opacity: .8;
+    }
+}
+    @media screen and (min-width: 48em) {
+        /*768px maior que */
+
+        .logos_footer {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    footer {
+        background-color: var(--cor-site);
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        /* altura do rodapé */
+        padding: 1em;
+        text-align: center;
+    }
+
+    .logos_footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .texto_footer {
+        font-size: 0.6em;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        padding-top: .8rem;
+        color: var(--cor-principal);
+    }
